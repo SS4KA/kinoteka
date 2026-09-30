@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная — Кинотека</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html">Киноте<span class="site-logo__accent">ка</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="register.html">Регистрация</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="login.html">Вход</a></li>
+          <li class="site-nav__item" data-auth="user" hidden><a class="site-nav__link" href="profile.html">Профиль</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="hero__label">Онлайн-кинотеатр</p>
+        <h1 class="hero__title">Хорошее кино — без лишнего шума</h1>
+        <p class="hero__description">
+          Кинотека — небольшая подборка фильмов, которые стоит посмотреть.
+          Выбирайте по жанру, находите по названию и смотрите онлайн в удобное время.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="catalog.html">Открыть каталог</a>
+          <a class="button button--secondary" href="register.html">Создать аккаунт</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Почему Кинотека</h2>
+        <div class="features__list">
+          <article class="feature">
+            <h3 class="feature__title">Тщательный отбор</h3>
+            <p class="feature__text">Только проверенные временем и признанные критиками фильмы.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Удобный поиск</h3>
+            <p class="feature__text">Фильтр по жанру и поиск по названию помогут быстро найти нужное.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Любое устройство</h3>
+            <p class="feature__text">Интерфейс одинаково удобен на компьютере, планшете и телефоне.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">© 2026 Кинотека.</p>
+      <p class="site-footer__text">Онлайн-кинотеатр</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

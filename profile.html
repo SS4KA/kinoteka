@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профиль — Кинотека</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html">Киноте<span class="site-logo__accent">ка</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="register.html">Регистрация</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="login.html">Вход</a></li>
+          <li class="site-nav__item" data-auth="user" hidden><a class="site-nav__link" href="profile.html" aria-current="page">Профиль</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="profile">
+      <div class="container container--narrow">
+        <h1 class="page-title">Профиль</h1>
+        <p class="page-subtitle" id="profile-greeting"></p>
+
+        <dl class="info-list">
+          <div class="info-list__row"><dt class="info-list__term">ФИО</dt><dd class="info-list__value" id="profile-fullname"></dd></div>
+          <div class="info-list__row"><dt class="info-list__term">Email</dt><dd class="info-list__value" id="profile-email"></dd></div>
+          <div class="info-list__row"><dt class="info-list__term">Логин</dt><dd class="info-list__value" id="profile-login"></dd></div>
+        </dl>
+
+        <div class="profile__actions">
+          <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
+          <button class="button button--secondary" id="logout-button" type="button">Выйти</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">© 2026 Кинотека.</p>
+      <p class="site-footer__text">Онлайн-кинотеатр</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

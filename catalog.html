@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — Кинотека</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html">Киноте<span class="site-logo__accent">ка</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="register.html">Регистрация</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="login.html">Вход</a></li>
+          <li class="site-nav__item" data-auth="user" hidden><a class="site-nav__link" href="profile.html">Профиль</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="catalog">
+      <div class="container">
+        <h1 class="page-title">Каталог фильмов</h1>
+        <p class="page-subtitle">Найдите фильм по названию или выберите жанр.</p>
+
+        <form class="catalog-filter" id="catalog-filter" role="search">
+          <div class="form-field catalog-filter__field">
+            <label class="form-field__label" for="search-input">Поиск по названию</label>
+            <input class="form-field__input" type="search" id="search-input" name="search" placeholder="Например, Начало">
+          </div>
+          <div class="form-field catalog-filter__field">
+            <label class="form-field__label" for="genre-select">Жанр</label>
+            <select class="form-field__input" id="genre-select" name="genre">
+              <option value="all">Все жанры</option>
+              <option value="Фантастика">Фантастика</option>
+              <option value="Драма">Драма</option>
+              <option value="Триллер">Триллер</option>
+              <option value="Комедия">Комедия</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="film-grid" id="film-grid">
+          <article class="film-card" data-genre="Фантастика">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/inception.svg" alt="Постер фильма «Начало»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.7</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Начало</h3>
+              <p class="film-card__original">Inception, 2010</p>
+              <p class="film-card__meta">Фантастика · 148 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=inception">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Фантастика">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/interstellar.svg" alt="Постер фильма «Интерстеллар»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.6</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Интерстеллар</h3>
+              <p class="film-card__original">Interstellar, 2014</p>
+              <p class="film-card__meta">Фантастика · 169 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=interstellar">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Драма">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/parasite.svg" alt="Постер фильма «Паразиты»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.5</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Паразиты</h3>
+              <p class="film-card__original">Gisaengchung, 2019</p>
+              <p class="film-card__meta">Драма · 132 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=parasite">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Триллер">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/pulp-fiction.svg" alt="Постер фильма «Криминальное чтиво»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.6</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Криминальное чтиво</h3>
+              <p class="film-card__original">Pulp Fiction, 1994</p>
+              <p class="film-card__meta">Триллер · 154 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=pulp-fiction">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Драма">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/shawshank.svg" alt="Постер фильма «Побег из Шоушенка»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">9.1</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Побег из Шоушенка</h3>
+              <p class="film-card__original">The Shawshank Redemption, 1994</p>
+              <p class="film-card__meta">Драма · 142 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=shawshank">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Комедия">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/grand-budapest.svg" alt="Постер фильма «Отель «Гранд Будапешт»»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.0</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Отель «Гранд Будапешт»</h3>
+              <p class="film-card__original">The Grand Budapest Hotel, 2014</p>
+              <p class="film-card__meta">Комедия · 99 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=grand-budapest">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Триллер">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/no-country.svg" alt="Постер фильма «Старикам тут не место»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.1</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Старикам тут не место</h3>
+              <p class="film-card__original">No Country for Old Men, 2007</p>
+              <p class="film-card__meta">Триллер · 122 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=no-country">Смотреть</a>
+            </div>
+          </article>
+          <article class="film-card" data-genre="Комедия">
+            <div class="film-card__poster">
+              <img class="film-card__image" src="posters/amelie.svg" alt="Постер фильма «Амели»" width="400" height="600" loading="lazy">
+              <span class="film-card__badge" title="Рейтинг">8.3</span>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Амели</h3>
+              <p class="film-card__original">Le Fabuleux Destin d'Amélie Poulain, 2001</p>
+              <p class="film-card__meta">Комедия · 122 мин</p>
+              <a class="button button--primary button--small" href="film.html?id=amelie">Смотреть</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="catalog__empty" id="catalog-empty" hidden>Ничего не найдено. Попробуйте изменить запрос или жанр.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">© 2026 Кинотека.</p>
+      <p class="site-footer__text">Онлайн-кинотеатр</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

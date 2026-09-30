@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Фильм — Кинотека</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html">Киноте<span class="site-logo__accent">ка</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="register.html">Регистрация</a></li>
+          <li class="site-nav__item" data-auth="guest"><a class="site-nav__link" href="login.html">Вход</a></li>
+          <li class="site-nav__item" data-auth="user" hidden><a class="site-nav__link" href="profile.html">Профиль</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="film-details" id="film-details" hidden>
+      <div class="container">
+        <a class="link film-details__back" href="catalog.html">← Назад в каталог</a>
+
+        <div class="film-details__layout">
+          <img class="film-details__poster" id="film-poster" src="posters/inception.svg" alt="" width="400" height="600">
+
+          <article class="film-details__info">
+            <h1 class="page-title" id="film-title"></h1>
+            <p class="film-details__original" id="film-original"></p>
+
+            <dl class="info-list">
+              <div class="info-list__row"><dt class="info-list__term">Рейтинг</dt><dd class="info-list__value" id="film-rating"></dd></div>
+              <div class="info-list__row"><dt class="info-list__term">Жанр</dt><dd class="info-list__value" id="film-genre"></dd></div>
+              <div class="info-list__row"><dt class="info-list__term">Год</dt><dd class="info-list__value" id="film-year"></dd></div>
+              <div class="info-list__row"><dt class="info-list__term">Длительность</dt><dd class="info-list__value" id="film-duration"></dd></div>
+              <div class="info-list__row"><dt class="info-list__term">Режиссёр</dt><dd class="info-list__value" id="film-director"></dd></div>
+            </dl>
+
+            <p class="film-details__description" id="film-description"></p>
+
+            <div class="film-details__player">Видеоплеер (демо-версия)</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-not-found" id="film-not-found" hidden>
+      <div class="container container--narrow">
+        <h1 class="page-title">Фильм не найден</h1>
+        <p class="page-subtitle">Такого фильма нет в каталоге.</p>
+        <p class="film-not-found__action"><a class="button button--primary" href="catalog.html">Вернуться в каталог</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">© 2026 Кинотека.</p>
+      <p class="site-footer__text">Онлайн-кинотеатр</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
